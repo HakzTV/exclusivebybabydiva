@@ -1,0 +1,76 @@
+.heroContainer {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    top: -110px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+  
+    .heroImage {
+      width: 90%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+    }
+  
+    .heroContent {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      z-index: 2;
+        width: 50%;
+      .heroTextBig {
+        text-transform: uppercase;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: "Jost", sans-serif;
+        font-size: 4.75rem;
+        font-weight: 700;
+        line-height: 1;
+        text-align: left;
+      }
+  
+      .heroTextSmall {
+       text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2rem;
+    font-family: "Jost", sans-serif;
+    text-align: left;
+
+    font-weight: 400;
+    line-height: 1.15;
+
+      }
+    }
+  }
+  
+  .leftoverlay{
+    position: absolute;
+    z-index: 4;
+    background-image: linear-gradient(to left, rgba(10, 2, 3, 0), #0A0203);
+    height: 101%;
+    width: 17%;
+    margin-left: auto;
+    margin-right: auto;
+    top: 0;
+    bottom: -1px;
+    left: 0;
+    right: auto;
+  }

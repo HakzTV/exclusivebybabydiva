@@ -1,0 +1,163 @@
+[
+  {
+    "product-id": 1,
+    "product-name": "Jordan 1 Retro High Satin Black Toe",
+    "product-url": "../src/assets/images/pro-1.jpeg",
+    "price": "GHC 100",
+    "category":"Shoes",
+    "item-condition": "New",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+        "expiry-Date": "07/12/2024",
+        "alt-images": [
+          "../src/assets/images/pro-1.jpeg",
+          "../src/assets/images/pro-1.jpeg"
+    
+        ]
+  
+  },
+  {
+    "product-id": 2,
+    "product-name": "Apple Watch Series 9",
+    "product-url": "../src/assets/images/pro-2.jpeg",
+    "price": "GHC 150",
+    "category":["Electronics", "Watch"],
+    "item-condition": "Fairly Used",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+          "expiry-Date": "07/08/2024",
+          "alt-images": [
+            "../src/assets/images/pro-2.jpeg",
+            "../src/assets/images/pro-2.jpeg"
+      
+          ]
+  },
+  {
+    "product-id": 3,
+    "product-name": "Mercedes-AMG S 63 Coupe 2019",
+    "product-url": "../src/assets/images/pro-3.jpeg",
+    "price": "GHC 100",
+    "category":"Vehicle",
+    "item-condition": "New",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "08/12/2024",
+    "alt-images": [
+      "../src/assets/images/pro-3.jpeg",
+      "../src/assets/images/pro-3.jpeg"
+
+    ]
+      },
+  {
+    "product-id": 4,
+    "product-name": "Carlton Grey Linen Fabric Cover Sofa",
+    "product-url": "../src/assets/images/pro-5.jpeg",
+    "price": "GHC 150",
+    "category":"Furniture",
+    "item-condition": "Fairly Used",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "07/05/2024",
+    "alt-images": [
+      "../src/assets/images/pro-5.jpeg",
+      "../src/assets/images/pro-5.jpeg"
+
+    ]
+
+  },
+  {
+    "product-id": 5,
+    "product-name": "Hinto Italian Leather Oxford",
+    "product-url": "../src/assets/images/pro-6.jpeg",
+    "price": "GHC 100",
+    "category":"Shoes",
+    "item-condition": "Old",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "08/12/2024",
+     "alt-images": [
+      "../src/assets/images/pro-6.jpeg",
+      "../src/assets/images/pro-6.jpeg"
+
+    ]
+      },
+  {
+    "product-id": 6,
+    "product-name": "3 Piece Men’s Wedding Suit",
+    "product-url": "../src/assets/images/pro-6.jpeg",
+    "price": "GHC 150",
+    "category":"Shoe",
+    "item-condition": "Fairly Used",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "08/05/2024",
+    "alt-images": [
+      "../src/assets/images/pro-6.jpeg",
+      "../src/assets/images/pro-6.jpeg"
+
+    ]
+
+  },
+  {
+    "product-id": 7,
+    "product-name": "Play Station 5 - Digital",
+    "product-url": "../src/assets/images/pro-7.jpeg",
+    "price": "GHC 100",
+    "category":"Electronics",
+    "item-condition": "New",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "08/12/2024",
+      "alt-image": "../src/assets/images/pro-7.jpeg",
+          "alt-image2": "../src/assets/images/pro-7.jpeg"
+           },
+  {
+    "product-id": 8,
+    "product-name": "Hamilton Khaki Field Day Date Auto",
+    "product-url": "../src/assets/images/pro-1.jpeg",
+    "price": "GHC 150",
+    "category":"Watches",
+    "item-condition": "Fairly Used",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "07/05/2024"
+
+  },
+  {
+    "product-id": 9,
+    "product-name": "Dell XPS 13",
+    "product-url": "../src/assets/images/pro-1.jpeg",
+    "price": "GHC 150",
+    "category":"Electronics",
+    "item-condition": "Fairly Used",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "07/05/2024"
+
+  },
+  {
+    "product-id": 10,
+    "product-name": "Product 10",
+    "product-url": "../src/assets/images/pro-7.jpeg",
+    "price": "GHC 100",
+    "category":"Electronics",
+    "item-condition": "New",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "08/12/2024",
+      "alt-image": "../src/assets/images/pro-7.jpeg",
+          "alt-image2": "../src/assets/images/pro-7.jpeg"
+  },
+  {
+    "product-id": 11,
+    "product-name": "Product 11",
+    "product-url": "../src/assets/images/pro-1.jpeg",
+    "price": "GHC 150",
+    "category":"Watch",
+    "item-condition": "Fairly Used",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "07/05/2024"
+
+  },
+  {
+    "product-id": 12,
+    "product-name": "Short Puffer Jacket",
+    "product-url": "../src/assets/images/pro-2.jpeg",
+    "price": "GHC 150",
+    "category":"Clothing",
+    "item-condition": "Fairly Used",
+    "product-details":"Experience lightning-fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers and 3D Audio, and an all-new generation of incredible PlayStation games.",
+    "expiry-Date": "07/05/2024"
+
+  }
+]

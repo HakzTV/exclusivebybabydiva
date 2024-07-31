@@ -1,0 +1,295 @@
+.all-products{
+    margin: 20px 0 20px 0;
+}
+.product-card {
+    font-family: 'MTN Bright Sans';
+    // border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    transition: transform 0.2s;
+    width: 335px;
+    height: 360px;
+
+
+     @include respond-to(sm) {
+      width: 160px;
+      height: 300px;
+  }
+    a{
+      text-decoration: none;
+    }
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 261px;
+    background-color: #F5F5F5;
+    overflow: hidden;
+
+     @include respond-to(sm) {
+    height: 225px;
+    border-radius: 8px;
+  }
+  }
+  
+  .product-image {
+    object-fit: cover;
+     @include respond-to(sm) {
+      width: 100%;
+  }
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    background: #1E1E1E;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s;
+
+    &:hover{
+      background: $btn-clr;
+    }
+  }
+  
+  .product-card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .bid-now {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .product-info {
+    // padding: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .product-info h3 {
+    padding-bottom: 5px;
+  }
+  
+  .product-info p {
+    margin: 0;
+    color: $white;
+    font-size: 1.2rem;
+
+
+    &:nth-child(3),  &:nth-child(2){
+      color: $btn-clr;
+    }
+  }
+  .products-grid {
+    display: flex;
+
+    flex-wrap: wrap;
+    margin: 40px 0;
+    gap: 20px;
+    @media  (max-width:450px) {
+      gap: 10px;
+    }
+  }
+  
+  .product-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+
+    font-family: 'MTN Bright Sans';
+    
+    a{
+
+       @include respond-to(sm) {
+        display: none;
+    }
+  }
+  h1{
+     @include respond-to(sm) {
+     font-size: 1.3rem;
+    }
+  }
+   @include respond-to(sm) {
+     margin-bottom: 20px;
+  }
+  }
+
+  // Individual Product
+  .content-wrapper{
+    display: flex;
+    gap: 20px;
+    font-family: 'MTN Bright Sans';
+
+    .other-images{
+      flex-direction: column;
+    display: flex;
+    align-items: center;
+      gap: 20px;
+    img{
+      width: 161px;
+      background-color: #F5F5F5;
+      border-radius:8px ;
+    }
+    }
+
+    .product-detail{
+      width: 50%;
+      height: 600px;
+
+      .image-container{
+        height: 100%;
+        border-radius: 8px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    .product-info{
+        width: 30%;
+      h2{
+        font-size: 2rem;
+        color: $btn-clr;
+      }
+    
+      p:nth-child(2){
+        font-size: 1.2rem;
+        color: #1E1E1E;
+        
+      }
+      p:nth-child(3){
+        color: #555;
+        font-size: 1rem;
+        margin-bottom: 30px;
+      }
+    }
+    .time-boxes {
+      display: flex;
+      gap: 10px;
+    }
+    
+    .time-box {
+
+      border: 1px solid #1E1E1E;
+      border-radius: 4px;
+      padding: 10px;
+      text-align: center;
+      width: 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .time-value {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    
+    .time-label {
+      font-size: 12px;
+      color: #555;
+    }
+    .accordion-container {
+      margin-top: 20px;
+    }
+    
+    .accordion {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    
+    .accordion-header {
+      background-color: #f0f0f0;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    .accordion-header.open {
+      background-color: #e0e0e0;
+    } 
+    
+    .accordion-content {
+      overflow: hidden;
+      transition: height 2s ease-out; 
+      height: 0;
+    }
+    
+    .accordion.open .accordion-content {
+      height: auto;
+      padding: 10px;
+    }
+    
+    
+  }
+
+  .product-upload-form {
+    max-width: 600px;
+    margin: 0 auto; // Center horizontally
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+  
+    .form-group {
+      margin-bottom: 15px;
+  
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+  
+      input,
+      textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+  
+        &:focus {
+          border-color: #007bff;
+          outline: none;
+        }
+      }
+  
+      textarea {
+        resize: vertical; // Allow vertical resizing
+        height: 100px;
+      }
+    }
+  
+    button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      background-color: #007bff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+  

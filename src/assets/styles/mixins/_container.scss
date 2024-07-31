@@ -1,0 +1,41 @@
+@mixin container {
+    margin: 0 auto;
+    padding: 0 $container-padding;
+    max-width: $container-max-width;
+    width: 100%;
+  }
+  
+  // Define your breakpoints
+  $breakpoints: (
+    xs: 0,
+    mxs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+  );
+  
+  // Mixin for media queries
+//   @mixin respond-to($breakpoint) {
+//     @if map-has-key($breakpoints, $breakpoint) {
+//       @media (min-width: map-get($breakpoints, $breakpoint)) {
+//         @content;
+//       }
+//     } @else {
+//       @warn "Unknown breakpoint #{$breakpoint}.";
+//     }
+//   }
+
+// Mixin for media queries
+@mixin respond-to($breakpoint, $type: max) {
+    $query-type: if($type == min, 'min-width', 'max-width');
+    
+    @if map-has-key($breakpoints, $breakpoint) {
+      @media (#{$query-type}: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    } @else {
+      @warn "Unknown breakpoint #{$breakpoint}.";
+    }
+  }
+  
