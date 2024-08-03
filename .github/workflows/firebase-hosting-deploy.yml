@@ -1,3 +1,39 @@
+# name: Deploy to Firebase Hosting on Push
+
+# # Trigger the workflow on push events to the main branch (you can adjust the branch as needed)
+# on:
+#   push:
+#     branches:
+#       - main  # Change to your main branch name if different
+
+# jobs:
+#   build_and_deploy:
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       # Step 1: Check out the repository code
+#       - name: Check out code
+#         uses: actions/checkout@v4
+
+#       # Step 2: Set up Node.js environment
+#       - name: Set up Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: '18'  # Use the appropriate Node.js version for your project
+
+#       # Step 3: Install dependencies and build the project
+#       - name: Install dependencies and build
+#         run: |
+#           npm ci
+#           npm run build
+
+#       # Step 4: Deploy to Firebase Hosting
+#       - name: Deploy to Firebase Hosting
+#         uses: FirebaseExtended/action-hosting-deploy@v0
+#         with:
+#           repoToken: '${{ secrets.GITHUB_TOKEN }}'
+#           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BABYDIVA_F620C }}'
+#           projectId: 'babydiva-f620c'
 name: Deploy to Firebase Hosting on Push
 
 # Trigger the workflow on push events to the main branch (you can adjust the branch as needed)
@@ -34,3 +70,4 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_BABYDIVA_F620C }}'
           projectId: 'babydiva-f620c'
+          channelId: 'live'  # Add your channel ID here
