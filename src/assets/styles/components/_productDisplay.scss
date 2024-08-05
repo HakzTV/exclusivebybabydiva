@@ -96,6 +96,14 @@
       position: relative;
       text-align: center;
       order: 2;
+
+      @include respond-to(md) {
+        width: 100%;
+        margin-top: 20px;
+      }
+      @include respond-to(sm) {
+        width: 100%;
+      }
       img:nth-child(1){
         position: absolute;
         z-index: 1;
@@ -121,6 +129,10 @@
         color: #fff;
         border-radius: 5px;
         width:  220px;
+        @include respond-to(md) {
+          width: 60%;
+        }
+    
         .product-view{
           border-left: 1px solid $btn-clr;
     padding-left: 15px;
@@ -157,8 +169,14 @@
   .product-display{
     display: flex;
     align-items: center;
+    @include respond-to(md) {
+      flex-direction: column;
+    }
     .display-content{
         width: 50%;
+        @include respond-to(md) {
+          width: 100%;
+        }
         .content-body{
             color: $white;
 
@@ -177,10 +195,18 @@
             color: $white;
             display: block;
             font-size: 4rem;
+
+            @include respond-to(md) {
+              font-size: 3rem;
+            }
         }
         span:nth-child(1){
           font-size: 2.5rem;
             font-weight: 400;
+
+            @include respond-to(md) {
+          font-size: 1.4rem;
+            }
         }
     }
   }

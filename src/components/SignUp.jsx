@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import logo from '../assets/images/Diva-Logo.png';
 import images from '../assets/images/about.png';
+import { createUserWithEmailAndPassword } from 'firebase/auth';
+import { auth } from '../firebase';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
@@ -9,43 +11,16 @@ const SignUp = () => {
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    const user = {
-      phone_number: phone,
-      email,
-      password,
-      first_name: firstName,
-      last_name: lastName,
-      user_type: 'ac53fb34-f0a8-405b-b332-b379407e73ed', // Default user type
-    };
-
-    try {
-      const response = await fetch('https://api.gavelgh.com/general/sign-up', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-      });
-
-      if (response.ok) {
-        const data = await response.json();
-        console.log('Sign up successful:', data);
-
-        // Store JWT token in localStorage
-        localStorage.setItem('jwtToken', data.token);
-
-        // Redirect to account verification page or any other page
-        window.location.href = '/account-verify'; // Hardcoded redirection
-      } else {
-        const errorMessage = await response.text();
-        console.error('Sign up failed:', response.status, errorMessage);
-      }
-    } catch (error) {
-      console.error('Sign up error:', error.message);
-    }
+    console.log('Email or Phone:', email);
+    console.log('Password:', password);
+    createUserWithEmailAndPassword(auth, email, password, phone, firstName, lastName)
+    .then((userCredential)=> {
+      console.log(userCredential)
+    }).catch((error)=>{
+      console.log(error)
+    })
   };
 
   return (
@@ -60,7 +35,7 @@ const SignUp = () => {
       </div>
       <div className="login-form">
         <img src={logo} alt="Login Illustration" style={{ width: '20%' }} />
-        <p style={{ color: '#BCBCBC', fontSize: '25px' }}>Sign Up</p>
+        <p style={{ color: '#BCBCBC', fontSize: '25px' }}>Create an Account</p>
         <form className='log-in' onSubmit={handleSubmit}>
           <div className="form-group w-100">
             <label htmlFor="fname">First Name</label>
