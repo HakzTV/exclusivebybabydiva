@@ -2,6 +2,8 @@
 color: $white;
 position: relative;
     padding: 20px;
+
+    
     .logo{
         width: 120px;
         img{
@@ -79,4 +81,10 @@ position: relative;
 .top-overlay{
     width: 97% !important;
     top: -60px;
+}
+.ewl{
+
+    @media (max-width: 1367px) {
+        margin-top:400px;
+    }
 }

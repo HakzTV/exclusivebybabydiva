@@ -28,8 +28,8 @@ import Video from "../components/Videos";
 
 import AboutSection from '../components/AboutSection';
 import ProductDisplay from '../components/ProductDisplay';
-import Footer from '../components/Footer';
 import data from '../data/data.json';
+import HomeFooter from '../components/Home-Footer';
 
 const Homepage = () => {
   return (
@@ -38,7 +38,7 @@ const Homepage = () => {
       <Video />
       <AboutSection />
       <ProductDisplay products={data} />
-      <Footer />
+      <HomeFooter />
     </div>
   );
 };

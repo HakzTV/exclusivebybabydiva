@@ -7,6 +7,7 @@ import ProductUploadForm from './components/ProductUploadForm';
 import ProductDetailContent from './Pages/ProductDetailPage';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
+// import ImageUpload from './components/PageContent';
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     <Route path="/aboutUs" element={<AboutPage />} />
     <Route path="/products" element={<ProductListing />} />
     <Route path="/pro-upload" element={<ProductUploadForm />} />
+    {/* <Route path="/pageUpload" element={<ImageUpload />} /> */}
     <Route path="/product/:id" element={<ProductDetailContent />} /> 
     <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

@@ -94,7 +94,7 @@
 
 // export default Navbar;
 import { useEffect, useState } from 'react';
-import Logo from '../assets/images/Diva-Logo.png';
+import Logo from '../assets/images/logo.png';
 import { auth } from '../firebase';
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';

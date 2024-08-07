@@ -76,7 +76,7 @@
 
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import logo from '../assets/images/Diva-Logo.png';
+import logo from '../assets/images/logo.png';
 import images from '../assets/images/about.png';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase'; 

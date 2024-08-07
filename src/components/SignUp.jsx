@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import logo from '../assets/images/Diva-Logo.png';
+import logo from '../assets/images/logo.png';
 import images from '../assets/images/about.png';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../firebase';

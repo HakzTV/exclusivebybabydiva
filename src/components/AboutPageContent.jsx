@@ -65,8 +65,31 @@ const AboutContent = () => {
     return (    
     <div className="aboutWrapper" style={{height: '150vh'}}>
     <div className="container">
-
-    <div className="about-sec" style={{height: '100vh'}}>
+    <div className='basic-about-sec '>
+        <div className="left w-40">
+        <div className="title">
+        <span className='heading-style-h4'>
+       Our Founder
+        </span>
+<span className='heading-style-h2 text-weight-bold text-colour-blue text-color-gold'>
+MILDRED ALEXANDRA MENKITI
+</span>
+        </div>
+        <div className="body">
+            
+        <span className='inline'></span>
+        <p className='text'>Every night of the show season is a spectacular visual feast. If you want to see the show before anyone else or are budget conscious, come to our Preview. If you love the glitz and glamour of an opening night join us for our Awards Night and see the winners announced in a live ceremony after the show.</p>
+        </div>
+        </div>
+        <div className="right w-60">
+        <div className="image-overlay_wrapper is-left-side is-large hide-tablet"></div>
+        <div className="image-overlay_wrapper is-top-side"></div>
+        <div 
+        className="image-overlay_wrapper is-bottom-side"></div>
+            <img src={founder} alt="" className='img-side' />
+        </div>
+        </div>
+    <div className="about-sec sub" >
         <div className="about-left"  style={{marginTop: '50px'}}>
          
           <div className="bottom">
@@ -90,30 +113,7 @@ const AboutContent = () => {
         </div>
         </div>
       </div>
-        <div className='basic-about-sec '>
-        <div className="left w-40">
-        <div className="title">
-        <span className='heading-style-h4'>
-        2024 Performance
-        </span>
-<span className='heading-style-h2 text-weight-bold text-colour-blue'>
-Schedule
-</span>
-        </div>
-        <div className="body">
-            
-        <span className='inline'></span>
-        <p className='text'>Every night of the show season is a spectacular visual feast. If you want to see the show before anyone else or are budget conscious, come to our Preview. If you love the glitz and glamour of an opening night join us for our Awards Night and see the winners announced in a live ceremony after the show.</p>
-        </div>
-        </div>
-        <div className="right w-60">
-        <div className="image-overlay_wrapper is-left-side is-large hide-tablet"></div>
-        <div className="image-overlay_wrapper is-top-side"></div>
-        <div 
-        className="image-overlay_wrapper is-bottom-side"></div>
-            <img src={founder} alt="" className='img-side' />
-        </div>
-        </div>
+        
 
     </div>
     </div>

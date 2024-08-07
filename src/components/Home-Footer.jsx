@@ -8,9 +8,9 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
 // import facebook from '../assets/images/Social-Icons-3.png'
 // import tiktok from  '../assets/images/Social-Icons-4.png'
 
-const Footer = () => {
+const HomeFooter = () => {
     return (  
-        <div className="footer ewl">
+        <div className="footer">
             <div className="container">
                 <div className="footer-content">
                     <div className="left">
@@ -76,4 +76,4 @@ const Footer = () => {
     );
 }
  
-export default Footer;
+export default HomeFooter;

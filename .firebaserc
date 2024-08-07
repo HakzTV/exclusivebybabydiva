@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "babydiva-f620c"
-  }
+    "default": "babydiva-f620c",
+    "babydiva": "babydiva-f620c"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
 }

@@ -84,6 +84,10 @@
 // ProductCarousel.scss
 .product-display-wrapper{
   padding: 100px 0;
+
+  @media (max-width: 1367px) {
+    padding:350px 0 50px 0 ;
+}
 }
 .product-carousel {
     display: flex;

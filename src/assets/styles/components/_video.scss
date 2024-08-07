@@ -32,6 +32,10 @@
       background: transparent;
 
       }
+      @media (max-width: 1367px) {
+        top:150px !important;
+    }
+   
       .text {
         color: white;
         text-align: center;

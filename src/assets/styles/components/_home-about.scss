@@ -1,6 +1,9 @@
 .home-about-sec {
     height: 100vh;
     margin-bottom: 60vh;
+
+
+    
   }
   
   .home-about-wrapper {
@@ -288,10 +291,13 @@
             z-index: 2;
             width: 700px !important;
             left: -150px;
-
+          
             @include respond-to(md) {
               display: none;
             }
+              @media (max-width: 1367px) {
+              top:360px !important;
+          }
           
         }   
         &:nth-child(2){
@@ -349,7 +355,9 @@
             left: -150px;
 
             
-            
+            @media (max-width: 1367px) {
+              top:360px !important;
+          }
         }   
         &:nth-child(2){
             position: absolute !important;
@@ -477,6 +485,9 @@
     @include respond-to(md) {
       width: 350px;
     }
+    @media (max-width: 1367px) {
+      width: 460px !important;
+  }
 
     
           }
