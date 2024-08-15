@@ -161,6 +161,7 @@ const Navbar = () => {
                         <div className="links">
                             <ul>
                                 <li><a href="/aboutUs">About Us</a></li>
+                                <li><a href="/about-team">Team</a></li>
                                 <li><a href="/products">Shop</a></li>
                                 <li><a href="/">Services</a></li>
                                 <li><a href="/">FAQs</a></li>
@@ -191,6 +192,7 @@ const Navbar = () => {
                     <div className="links">
                         <ul>
                             <li><a href="/aboutUs">About Us</a></li>
+                            <li><a href="/about-team">Team</a></li>
                             <li><a href="/products">Shop</a></li>
                             <li><a href="/">Services</a></li>
                             <li><a href="/">FAQs</a></li>

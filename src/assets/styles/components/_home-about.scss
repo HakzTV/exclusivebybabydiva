@@ -164,6 +164,7 @@
         "third";
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto;
+      height:auto;
     }
   
     .home-about-content {
@@ -186,6 +187,10 @@
       display: flex;
       grid-area: third; // Assign grid area for the third content block
   
+
+      @include respond-to(sm){
+       height: 180%
+      }
       .home-about-content-inner {
         width: 50%;
         position: relative;
@@ -194,6 +199,7 @@
   
         img {
           position: absolute;
+          max-width: 100%;
         }
   
         span {
@@ -367,6 +373,10 @@
             @include respond-to(md) {
               left: 50% !important;
             }
+            @include respond-to(sm) {
+              left: 110px !important;
+            }
+
         }
         &:nth-child(3){
             position: absolute !important;
@@ -399,7 +409,7 @@
     }
 }
   .about-left, .about-right{
-    margin-top: 200px;
+    margin-top: 400px;
     position: relative;
   }
   .done{
@@ -448,6 +458,9 @@
             flex-direction: column;
           }
     .about-left {
+      @include respond-to(xs) {
+        font-size: 1200px;
+          }
       .top {
         span {
 
@@ -458,6 +471,10 @@
 
           &:nth-child(1){
             font-size: 2.5rem;
+
+            @include respond-to(sm) {
+              font-size: 1.8rem;
+            }
           }
           &:nth-child(2){
             font-size: 3rem;
@@ -465,6 +482,9 @@
             font-size: 5rem;
 
                 color: $color-logo;
+                @include respond-to(sm) {
+                  font-size: 2.8rem;
+                }
             }
             
           }
@@ -482,20 +502,30 @@
             position: absolute;
     top: 230px;
     width: 660px;
+ 
     @include respond-to(md) {
       width: 350px;
     }
-    @media (max-width: 1367px) {
-      width: 460px !important;
-  }
-
-    
+    @include respond-to(sm) {
+      width:  250px;
+      left: 60px;
+   }
           }
+          @include respond-to(md) {
+            width: 350px;
+          }
+          @include respond-to(sm) {
+            width:  250px;
+            left: 2px;
+         }
         }
       }
     }
   
     .about-right {
+      @include respond-to(sm){
+        margin-top: 180px;
+      }
       span {
         display: block;
       }

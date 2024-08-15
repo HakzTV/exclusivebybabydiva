@@ -13,10 +13,7 @@ const AboutPage = () => {
       <HeroImage 
           imageUrl={founder} 
         bigText="African Fashion" 
-        smallText="Welcome to the World of" 
-
-
-      />
+        smallText="Welcome to the World of" />
       <AboutContent />
       <Footer />
     </div>

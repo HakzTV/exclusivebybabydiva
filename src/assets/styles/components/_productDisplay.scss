@@ -85,9 +85,14 @@
 .product-display-wrapper{
   padding: 100px 0;
 
+ 
   @media (max-width: 1367px) {
     padding:350px 0 50px 0 ;
 }
+@include respond-to(sm){
+  padding: 650px 0 50px 0;
+}
+
 }
 .product-carousel {
     display: flex;
@@ -107,6 +112,7 @@
       }
       @include respond-to(sm) {
         width: 100%;
+        flex-direction: column;
       }
       img:nth-child(1){
         position: absolute;
@@ -203,6 +209,9 @@
             @include respond-to(md) {
               font-size: 3rem;
             }
+            @include respond-to(sm) {
+              font-size: 2.4rem;
+                }
         }
         span:nth-child(1){
           font-size: 2.5rem;
@@ -211,6 +220,7 @@
             @include respond-to(md) {
           font-size: 1.4rem;
             }
+           
         }
     }
   }

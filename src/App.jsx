@@ -7,7 +7,8 @@ import ProductUploadForm from './components/ProductUploadForm';
 import ProductDetailContent from './Pages/ProductDetailPage';
 import Login from './components/Login';
 import SignUp from './components/SignUp';
-// import ImageUpload from './components/PageContent';
+import ImageUpload from './components/PageContent';
+import TeamPage from './Pages/TeamPage';
 
 
 function App() {
@@ -18,9 +19,10 @@ function App() {
     <Routes>
     <Route path="/" element={<Homepage />} />
     <Route path="/aboutUs" element={<AboutPage />} />
+    <Route path="/about-team" element={<TeamPage />} />
     <Route path="/products" element={<ProductListing />} />
     <Route path="/pro-upload" element={<ProductUploadForm />} />
-    {/* <Route path="/pageUpload" element={<ImageUpload />} /> */}
+    <Route path="/pageUpload" element={<ImageUpload />} />
     <Route path="/product/:id" element={<ProductDetailContent />} /> 
     <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />

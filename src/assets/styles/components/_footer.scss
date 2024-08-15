@@ -6,6 +6,14 @@ position: relative;
     
     .logo{
         width: 120px;
+
+        @include respond-to(sm) {
+           display: flex;
+           justify-content: center;
+           flex-direction: column;
+           align-items: center;
+           width: 100%;
+              }
         img{
             height: 100px;
         }
@@ -20,6 +28,9 @@ position: relative;
      justify-content: space-between;
         display: flex;
 
+        @include respond-to(sm) {
+           flex-direction: column;
+              }
         p{
             opacity: .85;
             margin-bottom: 0;
@@ -29,13 +40,27 @@ position: relative;
     }
     .left{
         width: 40%;
+        @include respond-to(sm) {
+        width: 100%;
+              }
     }
     .right{
         width: 50%;
         display: flex;
         justify-content: space-evenly;
-
+      
+        @include respond-to(sm) {
+        width: 100%;
+        justify-content: normal;
+        gap: 10px;
+        flex-wrap: wrap;
+        gap: 20px;
+              }
+             
         .footer-about{
+            @include respond-to(sm) {
+                width: 46%;
+            }
             ul{
                 display: flex;
                 flex-direction: column;
@@ -55,6 +80,9 @@ position: relative;
         display: flex;
         gap: 15px;
         margin-top: 15px;
+        @include respond-to(sm) {
+            justify-content: center;    
+          }
         
         svg{
             width: 25px;
