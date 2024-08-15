@@ -8,14 +8,28 @@
     @media (max-width: 1367px) {
         margin:100px
     }
+    @include respond-to(sm) {
+        flex-direction: column;
+        margin: 0;
+    }
     .left{
         align-self: center;
         padding-right: 20px;
+
+        @include respond-to(sm) {
+           
+            padding: 0;
+        }
     }
     .right{
         img{
             width: 57.68vw;
             object-position: 30% 10%;
+
+            @include respond-to(sm) {
+               width: 100%;
+               height: 50%;
+            }
         }
     }
     span {
@@ -54,6 +68,24 @@
 }
 .image-overlay_wrapper.is-left-side.is-large {
     width: 30%;
+
+    @include respond-to(sm) {
+        width: 21%;
+        left: 0px;
+        top: 74%;
+        height: 235px;
+    }
+}
+.image-overlay_wrapper.is-right-side.is-right-side   {
+    width: 30%;
+    display: none;
+    @include respond-to(sm) {
+        display: block;
+        width: 21%;
+        left: 291px;
+        top: 74%;
+        height: 235px;
+    }
 }
 
 .image-overlay_wrapper.is-bottom-side {
@@ -70,6 +102,12 @@
     width: 70.3%;
 
     right: auto;
+
+    @include respond-to(sm) {
+        width: 110%;
+        bottom: -129px;
+        height: 85px;
+    }
 }
 .image-overlay_wrapper.is-top-side {
     z-index: 1;
@@ -80,6 +118,12 @@
     bottom: auto;
     left: 40%;
     right: 0%;
+
+    @include respond-to(sm) {
+        top:74%;
+        left: -1%;
+        width: 101.3%;
+    }
 }
 
 .heading-style-h4 {

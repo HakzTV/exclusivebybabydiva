@@ -86,6 +86,8 @@ MILDRED ALEXANDRA MENKITI
         <div className="image-overlay_wrapper is-top-side"></div>
         <div 
         className="image-overlay_wrapper is-bottom-side"></div>
+          <div 
+        className="image-overlay_wrapper is-right-side"></div>
             <img src={founder} alt="" className='img-side' />
         </div>
         </div>
@@ -102,7 +104,7 @@ MILDRED ALEXANDRA MENKITI
           </div>
         </div>
         <div className="about-right"  style={{marginTop: '0'}}>
-        <div className="done" style={{top: '200px'}}>
+        <div className="done" >
 
         <div className="quote_quotation-wrapper">
         <div className="text-size-quotation outline-stroke-gold">{quote}</div></div>

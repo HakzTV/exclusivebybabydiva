@@ -37,9 +37,16 @@ img{
 }
 .w-40{
   width: 40%;
+
+  @include respond-to(sm) {
+    width:100%;
+}
 }
 .w-60{
   width: 60%;
+  @include respond-to(sm) {
+    width:100%;
+}
 }
 .breadCrumbs{
   margin-top: 20px;

@@ -416,10 +416,15 @@
     position: absolute;
     top: 400px;
     margin-left: 40px;
-
     @include respond-to(md) {
   top: 800px;
     }
+    @include respond-to(sm) {
+      top: 720px;
+        }
+    
+
+          
     .quote_quotation-wrapper {
         position: absolute;
         top: 24%;
