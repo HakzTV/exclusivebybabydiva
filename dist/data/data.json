@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Product 01",
+        "author": "Telvin varfley",
+        "country": "Ghana",
+        "year": "2024",
+        "link": "/",
+        "product-url": "../src/assets/images/woman.png"
+    },
+    {
+        "title": "Product 02",
+        "author": "Telvin varfley",
+        "country": "Ghana",
+        "year": "2024",
+        "link": "/",
+        "product-url": "../src/assets/images/woman.png"
+    },
+    {
+        "title": "Product 03",
+        "author": "Telvin varfley",
+        "country": "Ghana",
+        "year": "2024",
+        "link": "/",
+        "product-url": "../src/assets/images/woman.png"
+
+    }
+]

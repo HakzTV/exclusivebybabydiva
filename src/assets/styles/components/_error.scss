@@ -1,0 +1,22 @@
+.error-content{
+    width: 80vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+
+    .logo{
+        width: 200px;
+    }
+    h1, p{
+        color: $white;
+        margin-bottom: 10px;
+    }
+}
+.well{
+    color: $white !important;
+    text-decoration: none !important;
+    margin-top: 30px;
+}

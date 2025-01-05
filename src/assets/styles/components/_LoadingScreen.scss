@@ -1,0 +1,22 @@
+// src/components/LoadingScreen.scss
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000; // Dark background to cover the page content
+    z-index: 1000;
+    overflow: hidden;
+  
+    .loading-logo {
+      width: 100px; // Initial size of the logo
+      height: auto;
+    }
+  }
+  .loading-logo {
+    width: 150px; /* Adjust size as needed */
+  }

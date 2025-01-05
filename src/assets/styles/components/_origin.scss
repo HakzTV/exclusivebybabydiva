@@ -1,0 +1,286 @@
+//  .flipper{
+//     display: flex;
+//     justify-content: center;
+//     width: 100%;
+//     position: relative;
+//   }
+// .flipbook-container {
+//   // max-width: 600px;  /* Set the width to resemble a book */
+//   height: 660px;  /* Set the height like a book */
+//   // margin: 50px auto;  /* Center the book */
+//   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);  /* Add a shadow for depth */
+//   border: 1px solid #ddd;  /* Add a slight border to make it pop */
+//   border-radius: 10px;  /* Give the book some rounded edges */
+//   background-color: #fdfdfd;  /* Subtle background color */
+//   overflow: hidden;
+//   width: 30%;
+//   position: relative;
+//   .flipbook {
+//     width: 100% !important;
+//     height: 100% !important;
+//   }
+  
+//   .page {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: flex-start;
+//     align-items: center;
+//     padding: 30px;  /* Add padding to the page for book margins */
+//     height: 100%;
+//     background-color: #fff;
+
+   
+//   }
+//   .page-right{
+//     width: 100%;
+//   }
+//   .page-image {
+//     max-width: 100%; 
+//     width: 100%;
+//      height: auto; 
+//      max-height: 350px;
+//     border-radius: 4px;
+//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+//   }
+  
+//   .page-content {
+//     font-family: 'Georgia', serif;  /* Use a serif font for a traditional book look */
+//     font-size: 1.1rem;  /* Slightly larger text for readability */
+//     color: #333;  /* Dark text color */
+//     line-height: 1.8;  /* Spacing between lines */
+//     text-align: justify;  /* Justify text for a clean, book-like alignment */
+//     margin-top: 20px;
+//     text-align: center;
+//   }
+  
+//   .flipbook-container .FlipPage__page {
+//     background-color: #f9f9f9;
+//     border: none;
+//     border-radius: 10px;
+//     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+//   }
+  
+//   /* Optional: Add a "flip" animation effect for a smoother page flip */
+//   .FlipPage__page {
+//     transition: transform 0.5s ease-in-out;
+//   }
+  
+//   .FlipPage__page:hover {
+//     transform: rotateY(10deg);
+//   }
+
+// }  
+// .page-number {
+//   text-align: center;
+//   margin-top: 20px; /* Adjust the margin as needed */
+//   font-size: 16px; /* Font size for the page numbers */
+//   font-weight: bold; /* Bold text */
+// }
+// .page-controls {
+//   position: absolute;
+//   bottom: 10px;
+//   width: 100%;
+//   display: flex;
+//   justify-content: space-between;
+//   padding: 0 20px;
+//   z-index: 10;
+// }
+
+// .arrow-button {
+//   background: transparent;
+//   border: none;
+//   color: #333;
+//   font-size: 1.5rem;
+//   cursor: pointer;
+// }
+
+// .page-number-display {
+//   text-align: center;
+//   font-size: 1.2rem;
+//   margin-top: 1rem;
+//   color: #333;
+// }
+// .flipbook-container {
+//   height: 660px; /* Set the height like a book */
+//   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Add a shadow for depth */
+//   border: 1px solid #ddd; /* Add a slight border to make it pop */
+//   border-radius: 10px; /* Give the book some rounded edges */
+//   background-color: #fdfdfd; /* Subtle background color */
+//   overflow: hidden;
+//   position: relative;
+
+//   .flipbook {
+//     display: flex;
+//     transition: transform 0.5s ease-in-out; /* Smooth transition for flipping */
+    
+//     &.flipped {
+//       transform: rotateY(-180deg); /* Flip effect */
+//     }
+
+//     .page {
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: flex-start;
+//       align-items: center;
+//       padding: 30px; /* Add padding to the page for book margins */
+//       height: 100%;
+//       background-color: #fff;
+
+//       &.page-left {
+//         /* Optional styles for left page */
+//       }
+//       &.page-right {
+//         /* Optional styles for right page */
+//       }
+//     }
+//   }
+  
+//   .page-image {
+//     max-width: 100%; 
+//     height: auto; 
+//     max-height: 350px;
+//     border-radius: 4px;
+//     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+//   }
+  
+//   .page-content {
+//     font-family: 'Georgia', serif; /* Use a serif font for a traditional book look */
+//     font-size: 1.1rem; /* Slightly larger text for readability */
+//     color: #333; /* Dark text color */
+//     line-height: 1.8; /* Spacing between lines */
+//     text-align: center; /* Center text for a cleaner look */
+//     margin-top: 20px;
+//   }
+
+//   .page-controls {
+//     position: absolute;
+//     bottom: 10px;
+//     width: 100%;
+//     display: flex;
+//     justify-content: space-between;
+//     padding: 0 20px;
+//     z-index: 10;
+//   }
+
+//   .arrow-button {
+//     background: transparent;
+//     border: none;
+//     color: #333;
+//     font-size: 1.5rem;
+//     cursor: pointer;
+//   }
+
+//   .page-number {
+//     text-align: center;
+//     font-size: 16px; /* Font size for the page numbers */
+//     font-weight: bold; /* Bold text */
+//   }
+// }
+.flipper{
+  display: flex;
+  justify-content: center;
+}
+.flipbook-container {
+  width: 35%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 20px;
+  position: relative;
+}
+
+.flipbook {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.flipbook.flipped .page-left {
+  transform: rotateY(-180deg);
+}
+
+.boook-page {
+  width: 50%;
+  height: 100%;
+  backface-visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+}
+
+.page-left {
+  left: 0;
+  transform-origin: right center;
+}
+
+.page-right {
+  left: 50%;
+}
+
+.page-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 350px;
+  object-position: 0 10%;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.page-content {
+  font-size: 1.1rem;
+  color: #333;
+  line-height: 1.8;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.page-controls {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+
+.arrow-button {
+  background: transparent;
+  border: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  &:hover{
+    background-color: transparent;
+  }
+}
+
+.page-number {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+.book-page {
+  width: 50%; /* Each page takes up half the width */
+  transition: transform 0.6s;
+  overflow: hidden; /* Prevent overflow */
+}
+.page-left {
+  transform: perspective(1000px) rotateY(0deg);
+  width: 100%;
+  display: none;
+}
+
+.page-right {
+  transform: perspective(1000px) rotateY(0deg);
+  width: 100%;
+
+}
+
+.flipping .page-left {
+  transform: perspective(1000px) rotateY(-180deg);
+}
+
+.flipping .page-right {
+  transform: perspective(1000px) rotateY(180deg);
+}

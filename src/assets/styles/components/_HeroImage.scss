@@ -10,12 +10,17 @@
     background-color: #000;
   
     .heroImage {
-      width: 90%;
+      width: 100%;
       height: 100%;
       object-fit: cover;
       position: absolute;
+      object-position: 0 -100px;
       top: 0;
       right: 0;
+
+      @include respond-to(xl){
+        object-position: 0 20%;
+      }
     }
   
     .overlay {
@@ -35,7 +40,7 @@
       color: #fff;
       z-index: 2;
         width: 50%;
-
+      bottom: -90px;
         @include respond-to(sm) {
           width:80%;
           position: absolute;
@@ -46,11 +51,15 @@
         margin-top: 0;
         margin-bottom: 0;
         font-family: "Jost", sans-serif;
-        font-size: 4.75rem;
+        font-size: 2.75rem;
         font-weight: 700;
         line-height: 1;
         text-align: left;
 
+        @include respond-to(xl, min){
+        font-size: 4.75rem;
+          
+        }
         @include respond-to(md) {
           font-size: 3rem;
             }
@@ -60,13 +69,17 @@
        text-transform: uppercase;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "Jost", sans-serif;
     text-align: left;
 
     font-weight: 400;
     line-height: 1.15;
 
+    @include respond-to(xl, min){
+      font-size: 2.75rem;
+        
+      }
       }
     }
   }
@@ -83,4 +96,16 @@
     bottom: -1px;
     left: 0;
     right: auto;
+  }
+
+
+  .text-no-wrap {
+    text-transform: capitalize;
+  }
+
+  .customHeroStyle{
+    color: $primary-color !important;
+  }
+  .custom-footer{
+    margin-top: 15vh;
   }

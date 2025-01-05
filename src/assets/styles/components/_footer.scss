@@ -1,118 +1,152 @@
 .footer{
-color: $white;
-position: relative;
-    padding: 20px;
-
-    
-    .logo{
-        width: 120px;
-
-        @include respond-to(sm) {
-           display: flex;
-           justify-content: center;
-           flex-direction: column;
-           align-items: center;
-           width: 100%;
-              }
-        img{
-            height: 100px;
-        }
-        span{
-            font-size: 0.9rem;
-        }
-    }
-    img{
-        width: 100px;
-    }
-    &-content{
-     justify-content: space-between;
-        display: flex;
-
-        @include respond-to(sm) {
-           flex-direction: column;
-              }
-        p{
-            opacity: .85;
-            margin-bottom: 0;
-            font-size: 1.05rem;
-            margin-top: 10px;
-        }
-    }
-    .left{
-        width: 40%;
-        @include respond-to(sm) {
-        width: 100%;
-              }
-    }
-    .right{
-        width: 50%;
-        display: flex;
-        justify-content: space-evenly;
+  color: $white;
+  position: relative;
+      padding: 20px;
+  
       
-        @include respond-to(sm) {
-        width: 100%;
-        justify-content: normal;
-        gap: 10px;
-        flex-wrap: wrap;
-        gap: 20px;
-              }
-             
-        .footer-about{
-            @include respond-to(sm) {
-                width: 46%;
-            }
-            ul{
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                li{
-                    list-style: none;
-
-                    a{
-                        color: $white;
-                        text-decoration: none;
-                    }
+      .logo{
+          width: 120px;
+  
+          @include respond-to(sm) {
+             display: flex;
+             justify-content: center;
+             flex-direction: column;
+             align-items: center;
+             width: 100%;
                 }
-            }
-        }
-    }
-    .footer-socials{
-        display: flex;
-        gap: 15px;
-        margin-top: 15px;
-        @include respond-to(sm) {
-            justify-content: center;    
+          img{
+              height: 100px;
           }
+          span{
+              font-size: 0.9rem;
+          }
+      }
+      img{
+          width: 100px;
+      }
+      &-content{
+       justify-content: space-between;
+          display: flex;
+  
+          @include respond-to(sm) {
+             flex-direction: column;
+                }
+          p{
+              opacity: .85;
+              margin-bottom: 0;
+              font-size: 1.05rem;
+              margin-top: 10px;
+          }
+      }
+      .left{
+          width: 40%;
+          @include respond-to(sm) {
+          width: 100%;
+                }
+      }
+      .right{
+          width: 50%;
+          display: flex;
+          justify-content: space-between;
+          flex-direction: column;
+          gap: 20px;
         
-        svg{
-            width: 25px;
-            height: 25px;
-            padding: 10px;
-            color: $primary-color;
-            background-color: $color-logo;
-            border-radius: 50px;
-            border: 1px solid $color-logo;
+          @include respond-to(sm) {
+          width: 100%;
+          justify-content: normal;
+          gap: 10px;
+          flex-wrap: wrap;
+          gap: 20px;
+                }
+         
+                .bigfooter{
+                  display: flex;
+                  justify-content: space-evenly;
+                }
+          .footer-about{
+              @include respond-to(sm) {
+                  width: 46%;
+              }
+              ul{
+                  display: flex;
+                  flex-direction: column;
+                  gap: 10px;
+                  li{
+                      list-style: none;
+  
+                      a{
+                          color: $white;
+                          text-decoration: none;
 
-            &:hover{
-                color: $color-logo;
-                transition: all 0.3s ease-in;
-                background-color: transparent;
-                border: 1px solid $color-logo;
+                          @include respond-to(sm){
+                            word-wrap: break-word;
+                          }
+                      }
+                  }
+              }
+            }
+            .images{
+              display: flex;
+              justify-content: space-evenly;
+
+              img{
+                width: 280px;
+              }
             }
         }
-    }
-}
-.top{
-    top: 84% !important;
-    width: 97% !important;
-}
-.top-overlay{
-    width: 97% !important;
-    top: -60px;
-}
-.ewl{
+      .footer-socials{
+          display: flex;
+          gap: 15px;
+          margin-top: 15px;
+          @include respond-to(sm) {
+              justify-content: center;    
+            }
+          
+          svg{
+              width: 25px;
+              height: 25px;
+              padding: 10px;
+              color: $primary-color;
+              background-color: $color-logo;
+              border-radius: 50px;
+              border: 1px solid $color-logo;
+  
+              &:hover{
+                  color: $color-logo;
+                  transition: all 0.3s ease-in;
+                  background-color: transparent;
+                  border: 1px solid $color-logo;
+              }
+          }
+      }
+  }
+  .top{
+      top: 84% !important;
+      width: 97% !important;
+  }
+  .top-overlay{
+      width: 97% !important;
+      top: -60px;
+  }
+  .ewl{
+  
+      @media (max-width: 1367px) {
+          margin-top:400px;
+      }
+  }
 
-    @media (max-width: 1367px) {
-        margin-top:400px;
+
+  .gonelol{
+    margin-top:20vh;
+
+    @include respond-to(sm){
+        margin-top: 0;
     }
-}
+  }
+  //Product detail page
+  .gonelol2{
+    margin-top: 30vh;
+    @include respond-to(sm){
+        margin-top: 10vh;
+    }
+  }

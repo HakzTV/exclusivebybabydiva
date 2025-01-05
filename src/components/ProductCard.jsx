@@ -1,49 +1,30 @@
 // import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
-// // import { useEffect, useState } from 'react';
 
 // const ProductCard = ({ product }) => {
-// //   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft(product['expiry-Date']));
-
-// //   useEffect(() => {
-// //     const timer = setInterval(() => {
-// //       setTimeLeft(calculateTimeLeft(product['expiry-Date']));
-// //     }, 1000);
-
-// //     return () => clearInterval(timer);
-// //   }, [product['expiry-Date']]);
-
-// //   function calculateTimeLeft(expiryDate) {
-// //     const difference = new Date(expiryDate) - new Date();
-// //     let timeLeft = {};
-
-// //     if (difference > 0) {
-// //       timeLeft = {
-// //         days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-// //         hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-// //         minutes: Math.floor((difference / 1000 / 60) % 60),
-// //         seconds: Math.floor((difference / 1000) % 60),
-// //       };
-// //     } else {
-// //       timeLeft = { expired: true };
-// //     }
-
-// //     return timeLeft;
-// //   }
+//   const handleProductClick = () => {
+//     // Store product data in localStorage when clicked
+//     localStorage.setItem('selectedProduct', JSON.stringify(product));
+//   };
 
 //   return (
 //     <div className="product-card">
-//       <Link to={`/product/${product['product-id']}`}>
+//       <Link to={`/product/${product.id}`} target="_blank" onClick={handleProductClick}>
 //         <div className="image-container">
-//           <img src={product['product-url']} alt={product['product-name']} className="product-image" />
+//           <img
+//             src={product['product-url']}
+//             alt={product['product-name']}
+//             className="product-image"
+//           />
 //           <div className="overlay">
 //             <span className="bid-now">Order now</span>
+//             <span className="bid-now">Add to Cart</span>
 //           </div>
+          
 //         </div>
 //         <div className="product-info">
-//           {/* <p>Ends In: {timeLeft.expired ? 'Expired' : `${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}</p> */}
 //           <p>{product['product-name']}</p>
-//           <p>{product.price}</p>
+//           <p>GHC {product.price}</p>
 //         </div>
 //       </Link>
 //     </div>
@@ -52,45 +33,69 @@
 
 // ProductCard.propTypes = {
 //   product: PropTypes.shape({
-//     'product-id': PropTypes.number.isRequired,
-//     'product-name': PropTypes.string.isRequired,
-//     'product-url': PropTypes.string.isRequired,
-//     price: PropTypes.string.isRequired,
-//     'expiry-Date': PropTypes.string.isRequired,
-//   }).isRequired,
+//     id: PropTypes.string,
+//     'product-name': PropTypes.string,
+//     'product-url': PropTypes.string,
+//     price: PropTypes.string,
+//     'product-details': PropTypes.string, // Optional
+//   }),
 // };
 
 // export default ProductCard;
-    import { Link } from 'react-router-dom';
-    import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-    const ProductCard = ({ product }) => {
-    return (
-        <div className="product-card">
-        <Link to={`/product/${product.id}`}>
-            <div className="image-container">
-            <img src={product['product-url']} alt={product['product-name']} className="product-image" />
-            <div className="overlay">
-                <span className="bid-now">Order now</span>
-            </div>
-            </div>
-            <div className="product-info">
-            <p>{product['product-name']}</p>
-            <p>${product.price}</p>
-            </div>
-        </Link>
+import PropTypes from 'prop-types';
+import { useCart } from './contexts/CartContext'; // Import the useCart hook
+
+const ProductCard = ({ product }) => {
+  const { addToCart } = useCart(); // Access addToCart from the Cart Context
+
+  const handleProductClick = () => {
+    // Store product data in localStorage when clicked
+    localStorage.setItem('selectedProduct', JSON.stringify(product));
+  };
+
+  const handleAddToCart = () => {
+    // Ensure product data has the necessary fields before passing to addToCart
+    addToCart({
+      id: product.id,
+      'product-name': product['product-name'],
+      price: product.price,
+      'product-url': product['product-url'],
+    }); // Call addToCart with the correct product fields
+  };
+
+  return (
+    <div className="product-card">
+      <Link to={`/buy/${product.id}`} target="_blank" onClick={handleProductClick}>
+        <div className="image-container">
+          <img
+            src={product['product-url']}
+            alt={product['product-name']}
+            className="product-image"
+          />
+          <div className="overlay">
+            <span className="bid-now">Order now</span>
+            <span className="bid-now" onClick={handleAddToCart}>Add to Cart</span>
+          </div>
         </div>
-    );
-    };
+        <div className="product-info">
+          <p>{product['product-name']}</p>
+          <p>GHC {product.price}</p>
+        </div>
+      </Link>
+    </div>
+  );
+};
 
-    ProductCard.propTypes = {
-    product: PropTypes.shape({
-        id: PropTypes.string.isRequired,
-        'product-name': PropTypes.string.isRequired,
-        'product-url': PropTypes.string.isRequired,
-        price: PropTypes.string.isRequired,
-        'product-details': PropTypes.string, // Optional
-    }).isRequired,
-    };
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    'product-name': PropTypes.string.isRequired,
+    'product-url': PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    'product-details': PropTypes.string, // Optional
+  }).isRequired,
+};
 
-    export default ProductCard;
+export default ProductCard;

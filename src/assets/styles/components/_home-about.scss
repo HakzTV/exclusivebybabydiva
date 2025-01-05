@@ -147,12 +147,16 @@
     grid-template-rows: auto;
   
     // Medium screens (two columns, third div spans full width)
+    @include respond-to(lg) {
+      min-height: 31.5rem;
+    }
     @include respond-to(md) {
       grid-template-areas: 
         "first first"
         "second second"
         "third third"; // Ensure the third div spans full width
       grid-template-columns: 1fr 1fr;
+
       grid-template-rows: auto auto 90%; // Adjust rows for medium screens
     }
   
@@ -191,6 +195,7 @@
       @include respond-to(sm){
        height: 180%
       }
+     
       .home-about-content-inner {
         width: 50%;
         position: relative;
@@ -234,12 +239,14 @@
         margin-left: 0;
         margin-right: 0;
         p {
-          font-weight: bold;
           text-transform: uppercase;
-          font-size: 1.75rem;
+          font-size: 1.3rem;
           color: $white;
           font-family: 'Ginora Sans', sans-serif;
-  
+          
+          @include respond-to(sm){
+            font-size: 1rem;
+          }
           &:nth-child(3) {
             font-weight: 400;
             font-size: 1.4rem;
@@ -297,7 +304,8 @@
             z-index: 2;
             width: 700px !important;
             left: -150px;
-          
+
+           
             @include respond-to(md) {
               display: none;
             }
@@ -311,6 +319,18 @@
             top: 150px !important;
             z-index: 2;
             left: -150px;
+            
+       img{
+        @media (min-width: 1300px) {
+          
+        max-height: 600px !important;
+        object-position:0% 170px;
+        }
+        @include respond-to(xl, min){
+          max-height: 600px !important;
+          object-position:0% 170px;
+        }
+       }
             @include respond-to(md) {
               left: 50%;
             }
@@ -321,12 +341,24 @@
             top: 400px !important;
             z-index: 2;
             left: 250px;
+            img{
+              @media (min-width: 1300px) {
+                object-position: 40% 180px;
+                max-height: 500px !important;
+              }
+              @include respond-to(xl, min){
+                max-height: 530px !important;
+                object-position: 50% 170px;
+                object-fit: contain;
+              }
+            }
         }
         &:nth-child(4){
             position: absolute !important;
             top: 640px !important;
             z-index: 2;
             left: 100px;
+            width: 300px !important; 
         }
       .react-parallax-content {
         height: 500px; // Adjust height as needed
@@ -336,13 +368,16 @@
 
        
       }
-  
+      
       img{
-        width: 80% !important; // Adjust width as needed
+        width: 80% ; // Adjust width as needed
+        top: -150px;
         height: auto;
         max-height: 100px; // Adjust max height as needed
         object-fit: cover;
         z-index: 2;
+
+
       }
     }
   }
@@ -400,7 +435,7 @@
       }
   
       img{
-        width: 80% !important; // Adjust width as needed
+        width: 80% ; // Adjust width as needed
         height: auto;
         max-height: 400px; // Adjust max height as needed
         object-fit: cover;
@@ -408,19 +443,39 @@
       }
     }
 }
+
   .about-left, .about-right{
-    margin-top: 400px;
+    margin-top: 300px;
     position: relative;
+  }
+  .about-sec .about-left{
+    margin-top: 200px;
+  
+    @include respond-to(sm){
+      margin-top: 450px;
+
+      .top{
+        text-align: center;
+      }
+    }
   }
   .done{
     position: absolute;
     top: 400px;
     margin-left: 40px;
+
+    h2{
+      text-align: center;
+      font-size:2.7rem;
+      color: $white
+    }
     @include respond-to(md) {
   top: 800px;
     }
     @include respond-to(sm) {
       top: 720px;
+      margin-left: 0;
+      width: 100%;
         }
     
 
@@ -533,6 +588,7 @@
       }
       span {
         display: block;
+        text-align: justify
       }
     }
   }
@@ -553,7 +609,29 @@
   .custom-bg-class {
     filter: brightness(0.9);
   }
-  
+  .obj-1{
+    object-position: 50% 140%;
+    width: 80% !important;
+
+    @include respond-to(sm){
+      object-position: 50% 190px;
+
+    }
+  }
+  .obj-3{
+    object-position: 50% 140%;
+    width: 130% !important;
+    object-fit: contain !important;
+  }
+  .obj-2{
+    object-position: 50% 140%;
+    width: 75% !important;
+
+    @include respond-to(sm){
+      object-position: 50% 180px;
+    }
+  }
+
   .custom-content-class {
     display: flex;
     justify-content: center;
@@ -570,7 +648,7 @@
     transform: translateY(100%);
     opacity: 0;
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-    font-size: 40px;
+    font-size: 30px;
 
     @include respond-to(md) {
     font-size: 1.5rem;
@@ -583,3 +661,92 @@
   }
 
 
+// Special 
+.home-about-grid{
+  .home-about-content-inner {
+    // width: 50%;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+
+    img {
+      position: absolute;
+      max-width: 100%;
+      object-fit:  cover;
+    }
+
+    span {
+      position: relative;
+      z-index: 10;
+      padding: 0 0 25px 25px;
+      text-transform: uppercase;
+      display: flex;
+      gap: 15px;
+
+      &:hover svg {
+        animation: move 1.5s infinite ease-in-out;
+      }
+
+      a {
+        color: $white;
+        text-decoration: none;
+      }
+
+      svg {
+        font-size: 24px;
+        color: $white;
+      }
+    }
+  }
+}
+
+.text{
+  font-size: 1.2rem;
+  text-align: justify;
+}
+
+.introduction-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0 150px 0;
+  margin: 0 auto;
+}
+
+.introduction-title {
+  font-size: 3.25rem;
+  color: $white;
+  font-weight: 400;
+  text-transform: uppercase;
+  display: flex;
+  gap: 2px;
+  margin-bottom: 20px;
+}
+
+/* Styles for individual letters */
+.introduction-title span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: popIn 0.5s ease forwards;
+}
+
+/* Keyframes for popping in each letter */
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.introduction-content {
+  font-size: 1.1em;
+  color: $white;
+  line-height: 1.6;
+  max-width: 800px;
+}

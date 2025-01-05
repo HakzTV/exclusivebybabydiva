@@ -1,6 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import video from '../assets/videos/fashion.mp4';
+import video from '../assets/images/mil.mp4';
 
 const Video = () => {
   const videoRef = useRef(null);
@@ -26,9 +26,9 @@ const Video = () => {
       </video>
       <div className="overlay">
         <h1 ref={text1Ref} className="text text1">We are fashion</h1>
-        <h2 ref={text2Ref} className="text text2">Come and be elegant</h2>
+        <h2 ref={text2Ref} className="text text2">Embrace elegance with us.</h2>
       </div>
-      <div className="dark-overlay"></div>
+      <div className="dark-overlay" style={{height: '50%', zIndex: 0}}></div>
     </div>
   );
 };

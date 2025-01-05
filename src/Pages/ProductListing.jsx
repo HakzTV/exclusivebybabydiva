@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import Products from "../components/Products";
 import { fetchProducts } from '../firebase'; // Import fetchProducts from firebase.js
+import WhatsAppChat from '../components/WhatsappChat';
 
 const ProductListing = () => {
   const [products, setProducts] = useState([]);
@@ -37,6 +38,8 @@ const ProductListing = () => {
         <Products products={products} />
       </div>
       <Footer />
+      <WhatsAppChat /> 
+
     </div>
   );
 };

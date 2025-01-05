@@ -1,15 +1,34 @@
+.hey{
+    img{
+        width: 55%;
+        object-position: 50% 20%;
+    }
+}
 .basicContainer{
     display: flex;
     gap: 2rem;
 
-
+    .dFlex{
+        display: flex;
+        gap: 2rem;
+        margin-top: 50px;
+    
+        @include respond-to(md){
+            flex-direction: column;
+        }
+    }
+   
     img{
        
         height: 400px;
+        
+        @include respond-to(md){
+            width: 100%;
+        }
     }
 
     .basicTextContent{
-        width: 100%;
+        width: 80%;
 
         .heading-style-h4 {
             font-size: 2.5rem;
@@ -56,14 +75,17 @@
     height: 1px;
     position: relative;
     width: 430px;
+
+    @include respond-to(sm){
+        width: 9rem;
+    }
 }
 .margin-top {
     margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
 }
-.dFlex{
-    display: flex;
-    gap: 2rem;
-    margin-top: 50px;
+.dFlexe{
+    width: 100%;
+   
 }

@@ -16,12 +16,12 @@ const ProductDisplay = ({ products }) => {
       <span>PUSHING CREATIVE LIMITS</span>
 
       <div className="content-body">
-        <p>Each year, winners of WOW Awards are added to an incredible collection of garments. Here you can browse through our digital collection of groundbreaking wearable art as previously seen on the WOW stage. You will read about the designers and the inspiration behind these stunning works of art and see their impressive awards and accolades.</p>
+        <p>Exclusive Baby Diva Fl is an emerging brand dedicated to showcasing bold, innovative fashion that merges art and style. Our digital gallery features a curated collection of unique and exquisite garments, each piece carefully crafted to make a statement. As a new force in the fashion world, we are building a legacy of creativity and vision, celebrating the artistry and inspiration behind every design. Explore our ever-evolving collection and experience the cutting-edge of fashion, where every garment tells a story of passion and innovation.</p>
       </div>
 
       <div className="content-link">
-        <a href="/" className="btn-line">
-        EXPLORE THE WEARABLE ART ARCHIVE
+        <a href="/gallery" className="btn-line">
+        EXPLORE THE AFRICAN ART ARCHIVE
         </a>
       </div>
     </div>
@@ -44,7 +44,7 @@ ProductDisplay.propTypes = {
       country: PropTypes.string.isRequired,
       year: PropTypes.string.isRequired,
       link: PropTypes.string.isRequired,
-      'product-url': PropTypes.string.isRequired,
+      productUrl: PropTypes.string.isRequired,
     })
   ).isRequired,
 };

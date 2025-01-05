@@ -1,0 +1,104 @@
+.vision-section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    align-items: center;
+    padding: 4rem;
+    background: linear-gradient(to right, #e2e2e2, #ffffff);
+    color: #333;
+  @media (min-width: 1300px) {
+    margin-top: 130px;
+  }
+    .vision-content {
+      text-align: center;
+      margin-bottom: 2rem;
+      max-width: 600px;
+  
+      .vision-title {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #222;
+      }
+  
+      .vision-text {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: #666;
+        margin-top: 1rem;
+      }
+    }
+  
+    .vision-images {
+      display: flex;
+      gap: 1.5rem;
+  
+      .vision-image {
+        width: 150px;
+        height: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+  
+        &:hover {
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+  
+        &-1 {
+          background-image: url('image1.jpg'); // Replace with actual image paths
+        }
+        
+        &-2 {
+          background-image: url('image2.jpg'); // Replace with actual image paths
+        }
+        
+        &-3 {
+          background-image: url('image3.jpg'); // Replace with actual image paths
+        }
+      }
+    }
+  }
+  
+
+  .scissors{
+    position: relative;
+    img:nth-child(1){
+        width: 200px;
+        height: 200px;
+        transform: rotate(324deg);
+        position: absolute;
+        bottom: 130px;
+        left: 480px;
+        @media (min-width: 1300px) {
+         left: 380px;
+        }
+        @include respond-to(md){
+            display: none;
+        }
+    }
+    img:nth-child(2){
+        width: 220px;
+        height: 220px;
+        position: absolute;
+        bottom: 110px;
+        left: -670px;
+
+        @include respond-to(md){
+            display: none;
+        }
+    }
+    img:nth-child(3){
+      width: 150px;
+      height: 150px;
+        transform: rotate(45deg);
+        position: absolute;
+        bottom: -90px;
+        left: -730px;
+
+        @include respond-to(md){
+            display: none;
+        }
+    }
+  }

@@ -28,7 +28,7 @@ import PropTypes from 'prop-types';
 import { gsap } from 'gsap';
 
 
-const HeroImage = ({ imageUrl, bigText, smallText }) => {
+const HeroImage = ({ imageUrl, bigText, smallText, specstyle }) => {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo('.heroTextBig', { x: '-100%' }, { x: '-40%', duration: 1.5, ease: 'power2.out' })
@@ -41,7 +41,7 @@ const HeroImage = ({ imageUrl, bigText, smallText }) => {
       <div className="overlay"></div>
       <div className="leftoverlay"></div>
       <img src={imageUrl} alt="Hero Background" className="heroImage" />
-      <div className="heroContent">
+      <div className={`heroContent ${specstyle || ''}`}>
         <h1 className="heroTextSmall">{smallText}</h1>
         <h2 className="heroTextBig">{bigText}</h2>
       </div>
@@ -52,6 +52,7 @@ const HeroImage = ({ imageUrl, bigText, smallText }) => {
 HeroImage.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   bigText: PropTypes.string.isRequired,
+  specstyle: PropTypes.string,
   smallText: PropTypes.string.isRequired,
 };
 

@@ -1,0 +1,69 @@
+.whatsapp-chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+  
+    h2 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: #25D366; // WhatsApp green color
+      text-align: center;
+    }
+  
+    textarea {
+      width: 100%;
+      max-width: 400px;
+      height: 100px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      resize: none;
+      margin-bottom: 10px;
+      outline: none;
+  
+      &:focus {
+        border-color: #25D366;
+        box-shadow: 0 0 4px rgba(37, 211, 102, 0.5);
+      }
+    }
+  
+    button {
+      background-color: #25D366;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+  
+      &:hover {
+        background-color: #1da851;
+      }
+  
+      &:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+      }
+    }
+  
+    p {
+      margin-top: 10px;
+      font-size: 0.9rem;
+      color: #555;
+  
+      &.success {
+        color: #28a745; // Green for success
+      }
+  
+      &.error {
+        color: #dc3545; // Red for error
+      }
+    }
+  }
+  

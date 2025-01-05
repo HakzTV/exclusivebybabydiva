@@ -1,12 +1,10 @@
+// src/components/HomeFooter.js
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Logo from '../assets/images/logo.png';
-import {   faInstagramSquare,  faPinterestP, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagramSquare, faThreads, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons/faFacebookF';
-// import instagram from '../assets/images/Social-Icons-1.png'
-
-// import twitter from '../assets/images/Social-Icons-2.png'
-// import facebook from '../assets/images/Social-Icons-3.png'
-// import tiktok from  '../assets/images/Social-Icons-4.png'
+import visa from '../assets/images/mono.png';
 
 const HomeFooter = () => {
     return (  
@@ -14,66 +12,65 @@ const HomeFooter = () => {
             <div className="container">
                 <div className="footer-content">
                     <div className="left">
-                    <div className="logo">
-                        <img src={Logo} alt="Logo" />
-                        <span>Exclusive Baby Diva</span>
-                    </div>
-                    <div className="footer-content">
-                        <p>s a world renowned wearable art experience, where an annual design competition culminates in a spectacular show combining theatre, art, fashion, music, & performance.</p>
-                    </div>
-                    <div className="footer-socials">
-                    <a href="/">
-
-                    <FontAwesomeIcon  icon={faPinterestP} />
-                    </a>
-                    <a href="/">
-                        
-                    <FontAwesomeIcon  icon={faFacebookF} />
-                    </a>
-                    <a href="/">
-                        
-                    <FontAwesomeIcon  icon={faInstagramSquare} />
-                    </a>
-                    <a href="/">
-                        
-                    <FontAwesomeIcon  icon={faYoutube} />
-                    </a>
-
-                    </div>
+                        <div className="logo">
+                            <img src={Logo} alt="Logo" />
+                            <span>ExclusiveBabyDivaFL</span>
+                        </div>
+                        <div className="footer-content">
+                            <p>ExclusiveBabyDivaFl stands at the forefront of contemporary and African fashion, blending elegance with cultural richness to create timeless, trendsetting pieces. Our brand celebrates diversity and sophistication, offering luxurious designs that honor African heritage while embracing modern style. At ExclusiveBabyDivaFl, we believe in fashion that empowers and inspires, ensuring that every garment reflects our commitment to quality, creativity, and authenticity in the ever-evolving world of fashion.</p>
+                        </div>
+                        <div className="footer-socials">
+                            <a href="https://www.tiktok.com/@exclusivebabydivafl?_t=8fvtl9wloWr&_r=1">
+                                <FontAwesomeIcon icon={faTiktok} />
+                            </a>
+                            <a href="https://www.facebook.com/profile.php?id=100063763849264">
+                                <FontAwesomeIcon icon={faFacebookF} />
+                            </a>
+                            <a href="https://instagram.com/exclusivebabydivafl?igshid=MzMyNGUyNmU2YQ==">
+                                <FontAwesomeIcon icon={faInstagramSquare} />
+                            </a>
+                            <a href="https://www.threads.net/@exclusivebabydivafl">
+                                <FontAwesomeIcon icon={faThreads} />
+                            </a>
+                        </div>
                     </div>
                     <div className="right">
+                    <div className="bigfooter">
+
                         <div className="footer-about">
-                        <h2 className="footer-about-title">About Us</h2>
+                            <h2 className="footer-about-title">About Us</h2>
                             <ul>
-                                <li><a href="/">About us</a></li>
-                                <li><a href="/">Text 01</a></li>
-                                <li><a href="/">Text 02</a></li>
+                                <li><a href="/">Home</a></li>
+                                <li><a href="/aboutUs">About us</a></li>
                             </ul>
                         </div>
                         <div className="footer-about">
-                        <h2 className="footer-about-title">Explore</h2>
+                            <h2 className="footer-about-title">Explore</h2>
                             <ul>
-                                <li><a href="/">About us</a></li>
-                                <li><a href="/">Text 01</a></li>
-                                <li><a href="/">Text 02</a></li>
+                                <li><a href="/faq">FAQs</a></li>
+                                <li><a href="/about-team">Team</a></li>
                             </ul>
                         </div>
                         <div className="footer-about">
-                        <h2 className="footer-about-title">About Us</h2>
+                            <h2 className="footer-about-title">Visit Us</h2>
                             <ul>
-                                <li><a href="/">About us</a></li>
-                                <li><a href="/">Text 01</a></li>
-                                <li><a href="/">Text 02</a></li>
+                                <li><a href="tel:+233543062425"> +233543062425</a></li>
+                                <li><a href="mailto:info@exclusivebabydivafl.com">info@exclusivebabydivafl.com</a></li>
                             </ul>
+                             {/* Include the Map component here */}
                         </div>
-                        
+
+                    </div>
+                        <div className="images">
+                            <img src={visa} alt="Visa" />
+                          
+                        </div>
                     </div>
                 </div>
             </div>
-      <div className="dark-overlay top-overlay"></div>
-
+            <div className="dark-overlay top-overlay"></div>
         </div>
     );
-}
- 
+};
+
 export default HomeFooter;

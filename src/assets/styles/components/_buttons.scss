@@ -86,6 +86,7 @@
     border: 1px solid $color-logo;
     color: $primary-color;
 }
+
 .pulse-ring {
     position: absolute;
     top: 5%;
@@ -108,3 +109,65 @@
       opacity: 0;
     }
   }
+
+  .m-left{
+    margin-left: 15px;
+    border: 1px solid $btn-clr ;
+    transition: all 0.2s ease-in;
+
+    &:hover{
+      background-color: $btn-clr;
+    }
+  }
+
+  /* src/components/SignUp.scss */
+.login-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login-image, .login-form {
+  width: 50%;
+}
+
+.google-btn {
+  background-color: #4285F4;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.google-btn:hover {
+  background-color: #357ae8;
+}
+
+.log-in {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.sign-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sign-btn:hover {
+  background-color: #45a049;
+}
+
+.product-btn{
+  margin-bottom: 15px;
+  cursor: pointer;
+}

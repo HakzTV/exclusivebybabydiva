@@ -1,12 +1,34 @@
+.aboutWrapper{
+
+    @include respond-to(md){
+
+        height: 300vh;
+    }
+    @include respond-to(sm){
+
+        height: 100%;
+    }
+}
 .basic-about-sec {
     display: flex;
-    height: 420px;
-    margin-bottom: 150px;
+    margin-bottom: 10px;
     color: $white;
     position: relative;
 
     @media (max-width: 1367px) {
         margin:100px
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        margin:10px;
+        height: 100%;
+        
+    div:nth-child(1){
+        order: 2;
+    }
+    div:nth-child(2){
+        order: 1;
+    }
     }
     @include respond-to(sm) {
         flex-direction: column;
@@ -16,16 +38,27 @@
         align-self: center;
         padding-right: 20px;
 
+        .body{
+            margin-top: 15px;
+        }
         @include respond-to(sm) {
            
             padding: 0;
+
         }
     }
     .right{
         img{
             width: 57.68vw;
             object-position: 30% 10%;
-
+            @include respond-to(xl, min){
+                width:  46.68vw;
+                  
+                
+                }
+                @media (min-width: 1300px) {
+                    width: 51.68vw
+                }
             @include respond-to(sm) {
                width: 100%;
                height: 50%;
@@ -56,19 +89,29 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
+
+    @include respond-to(md) {
+        display: none;
+    }
+
 }
 .image-overlay_wrapper.is-left-side {
     z-index: 4;
     background-image: linear-gradient(271deg, rgba(10, 2, 3, 0), #0A0203 96%);
-    width: 60%;
+    width: 64%;
     top: auto;
     bottom: 0%;
     left: 40%;
     right: auto;
+    @include respond-to(md) {
+        display: none;
+    }
 }
 .image-overlay_wrapper.is-left-side.is-large {
     width: 30%;
-
+    @include respond-to(md) {
+        display: none;
+    }
     @include respond-to(sm) {
         width: 21%;
         left: 0px;
@@ -79,8 +122,11 @@
 .image-overlay_wrapper.is-right-side.is-right-side   {
     width: 30%;
     display: none;
+    @include respond-to(md) {
+        display: none;
+    }
     @include respond-to(sm) {
-        display: block;
+        // display: block;
         width: 21%;
         left: 291px;
         top: 74%;
@@ -99,10 +145,17 @@
     top: auto;
     bottom: -1px;
     left: auto;
-    width: 70.3%;
+    width: 64%;
 
     right: auto;
-
+    @include respond-to( xl, min) {
+      
+        width: 115%;
+        
+    }  
+    @include respond-to(md) {
+        display: none;
+    }
     @include respond-to(sm) {
         width: 110%;
         bottom: -129px;
@@ -112,18 +165,26 @@
 .image-overlay_wrapper.is-top-side {
     z-index: 1;
     background-image: linear-gradient(to top, rgba(10, 2, 3, 0), #0A0203);
-    width: 70.3%;
+    width: 64%;
     height: 5rem;
     top: 0%;
     bottom: auto;
     left: 40%;
     right: 0%;
-
+   
+    @include respond-to( xl, min) {
+      
+        width: 115%;
+        
+    }  
+    
+   
     @include respond-to(sm) {
         top:74%;
         left: -1%;
         width: 101.3%;
     }
+   
 }
 
 .heading-style-h4 {
@@ -135,9 +196,16 @@
 }
 .sub{
     height: 100vh;
-
     @media (max-width: 1367px) {
         height: 120vh;
+    }
+   
+}
+.dFlex{
+    img{
+        @media (max-width:768px) {
+            width: 100%;
+        }
     }
 }
 

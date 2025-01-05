@@ -7,9 +7,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import goldLeft from '../assets/images/gold-sparkless-left.png';
 import goldRight from '../assets/images/gold-sparkless-right.png';
 import gold from '../assets/images/gold.png';
-import mens from '../assets/images/mens.jpeg';
-import womens from '../assets/images/womens.jpg';
-import woman from '../assets/images/pole.jpeg';
+import mens from '../assets/images/model.jpg';
+import womens from '../assets/images/solo-cup.jpg';
+import woman from '../assets/images/hands.jpg';
+import weman from '../assets/images/wemen.jpg';
+import manman from '../assets/images/manman.jpg';
+import kids from '../assets/images/pro-7.jpeg'
 
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
@@ -64,7 +67,6 @@ const AboutSection = () => {
     animateWords();
   }, []);
 
-  const year = new Date().getFullYear();
 
   return (
     <div className="home-about-sec">
@@ -78,42 +80,49 @@ const AboutSection = () => {
             <div className="home-about-content">
               <div className="top-content marg-medium">
                 <p>
-                  <span>{year}</span> is your time to be elegant with exclusive baby diva
+                At ExclusiveBabyDivaFl, we believe in fashion that empowers and inspires, ensuring that every garment reflects our commitment to quality, creativity, and authenticity in the ever-evolving world of fashion.
                 </p>
               </div>
               <div className="bottom-content">
-                <p>
-                  A world-renowned wearable art experience, where an annual design competition culminates in a
-                  spectacular show combining theatre, art, fashion, music & performance.
-                </p>
+                <a href="/gallery" className="btn-line">
+                  Check out our gallery
+                </a>
               </div>
             </div>
-            <div className="home-about-content">
+            {/* <div className="home-about-content">
               <div className="top-content">
                 <p>26 JULY - 13 AUGUST</p>
                 <p>ACCRA, GHANA</p>
                 <p>TSB ARENA WELLINGTON</p>
               </div>
               <div className="bottom-content">
-                <a href="/" className="btn-line">
-                  tickets on sale
+                <a href="/gallery" className="btn-line">
+                  Check out our gallery
                 </a>
               </div>
-            </div>
+            </div> */}
+            <div className="home-about-content-inner">
+                <img src={kids} alt="Mens fit" />
+                <span>
+                  <a href="/kids">Children's Outfit</a>
+                  <FontAwesomeIcon icon={faArrowRight} className="icon" />
+                </span>
+                <div className="dark-overlay"></div>
+              </div>
             <div className="home-about-content-double">
               <div className="home-about-content-inner">
-                <img src={mens} alt="Mens fit" />
+                <img src={manman} alt="Mens fit" />
                 <span>
-                  <a href="/">Mens Outfit</a>
+                  <a href="/male">Mens Outfit</a>
                   <FontAwesomeIcon icon={faArrowRight} className="icon" />
                 </span>
                 <div className="dark-overlay"></div>
               </div>
 
               <div className="home-about-content-inner">
-                <img src={womens} alt="Womens fit" />
+                <img src={weman}  alt="Womens fit" />
                 <span>
-                  <a href="/">Womens Outfit</a>
+                  <a href="/female">Womens Outfit</a>
                   <FontAwesomeIcon icon={faArrowRight} className="icon" />
                 </span>
                 <div className="dark-overlay"></div>
@@ -124,14 +133,14 @@ const AboutSection = () => {
         <div className="about-sec">
           <div className="about-left">
             <div className="top">
-              <span>Wow is an</span>
+              <span>ExclusiveBabyDivaFl is an</span>
               <span>EXPLOSION OF <span>CREATIVITY</span></span>
             </div>
             <div className="bottom">
               <Parallax className="parallax-img gold-bg" style={{ overflow: 'auto' }} blur={2} bgImage={gold} strength={100}></Parallax>
-              <Parallax className="parallax-img" bgImage={mens} strength={300} bgClassName="custom-bg-class" contentClassName="custom-content-class"></Parallax>
-              <Parallax className="parallax-img" bgImage={womens} strength={-100} bgClassName="custom-bg-class" contentClassName="custom-content-class"></Parallax>
-              <Parallax className="parallax-img" bgImage={woman} strength={-100} bgClassName="custom-bg-class" contentClassName="custom-content-class"></Parallax>
+              <Parallax className="parallax-img" bgImage={mens}  strength={300} bgClassName="custom-bg-class obj-1" contentClassName="custom-content-class"></Parallax>
+              <Parallax className="parallax-img" bgImage={womens} strength={-100} bgClassName="custom-bg-class obj-2" contentClassName="custom-content-class"></Parallax>
+              <Parallax className="parallax-img" bgImage={woman} strength={-100} bgClassName="custom-bg-class obj-3" contentClassName="custom-content-class"></Parallax>
 
               {/* <Parallax className="parallax-img" bgImage={mens} strength={-300} bgClassName="custom-bg-class" contentClassName="custom-content-class"
                 renderLayer={(percentage) => (
@@ -152,12 +161,12 @@ const AboutSection = () => {
               </Parallax> */}
             </div>
           </div>
-          <div className="about-right">
+          <div className="about-right" >
           <div className="done">
 
           <div className="quote_quotation-wrapper">
           <div className="text-size-quotation outline-stroke-gold">{quote}</div></div>
-            <span className='ani-text'>To take art off the wall and out of static display. To adorn the body in wildly wonderful ways. To celebrate creativity in a lavish and unique on-stage spectacular that will inspire us all.</span>
+            <span className='ani-text'>Our mission, though elegantly simple, carries profound significance: we are dedicated to creating a lasting impact in the lives of individuals who choose to embrace our brand. This commitment is realized through the meticulous craftsmanship of our Afrocentric, sophisticated pieces, designed to empower and inspire each wearer.</span>
           <div className="quote_quotation-wrapper quotation-right"><div className="text-size-quotation outline-stroke-gold">{quote}</div></div>
 
           

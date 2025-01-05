@@ -6,6 +6,7 @@ import BreadCrumbs from "../components/BreadCrumbs";
 import Footer from "../components/Footer";
 import ProductDetail from "../components/ProductDetail";
 import Navbar from '../components/Navbar';
+import WhatsAppChat from '../components/WhatsappChat';
 
 const ProductDetailContent = () => {
   const { id } = useParams();
@@ -46,13 +47,14 @@ const ProductDetailContent = () => {
     // Implement your selection logic here
   };
 
+  
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <div>
       <Navbar />
-      <BreadCrumbs pageName="Products" home={{ href: '/', label: 'Women' }} links="oh well" />
+      <BreadCrumbs pageName="Products" home={{ href: '/', label: 'Home' }}  links={product && product['general-category'] ? product['general-category'] : 'Unknown Category'}/>
       <div className="container">
         {product ? (
           <ProductDetail
@@ -63,7 +65,10 @@ const ProductDetailContent = () => {
           <p>No product found.</p>
         )}
       </div>
-      <Footer />
+      <Footer className="custom-footervh gonelol2" /> {/* Pass className prop */}
+      <WhatsAppChat /> 
+
+
     </div>
   );
 };

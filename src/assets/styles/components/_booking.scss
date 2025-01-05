@@ -1,0 +1,47 @@
+// src/components/BookingForm.module.scss
+.bookingForm {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.bookingForm button {
+  background-color: $btn-clr;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.bookingForm button:hover {
+  background-color: rgba($color: $btn-clr, $alpha: 0.9);
+}
+
+.bookingForm input[type="text"],
+.bookingForm input[type="datetime-local"],
+.bookingForm input[type="email"] {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+.bookingForm input[type="datetime-local"] {
+  padding: 5px;
+}
+
+.bookingForm input[type="text"]::placeholder,
+.bookingForm input[type="datetime-local"]::placeholder,
+.bookingForm input[type="email"]::placeholder {
+  color: #888;
+}
